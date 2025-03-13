@@ -11,8 +11,8 @@ if(!isset($_SESSION["teacherid"]))
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Santhigiri College of Computer Sciences</title>
-  <link rel="shortcut icon" type="image/png" href="assets/images/logos/Logo-sm (1).png" />
+  <title>University College Of Cyber</title>
+  <link rel="shortcut icon" type="image/png" href="assets/images/logos/University logo.png" />
   <link rel="stylesheet" href="assets/css/styles.min.css" />
 </head>
 
@@ -26,7 +26,7 @@ if(!isset($_SESSION["teacherid"]))
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="home.php" class="text-nowrap logo-img">
-            <img src="assets/images/logos/santhilogo.jpg" width="180" alt="" />
+            <img src="assets/images/logos/full logo.png" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>

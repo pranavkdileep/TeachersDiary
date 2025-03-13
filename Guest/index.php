@@ -110,7 +110,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2025 University College of Cyber security. Developed By Amirthjoy AI,Ajradh TK,Albert C Domanic & Archana BU.</p>
+    <p>&copy; 2025 University College of Cyber security. Developed By Amirthjoy AI,Ajradh TK,Albert C Dominic & Archana BU.</p>
 </footer>
 
 <!-- Bootstrap JS and dependencies -->

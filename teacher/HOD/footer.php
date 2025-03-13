@@ -1,5 +1,5 @@
 <div class="py-6 px-6 text-center footer ">
-          <p class="mb-0 fs-4">Developed By Jose K Mani & Shelbin C Bino.&copy;  2024 Teachers' Dairy.</a></p>
+          <p class="mb-0 fs-4">Developed By Amirthjoy AI,Albert C Dominic,Ajradh TK & Archana BU.&copy;  2025 Teachers' Dairy.</a></p>
         </div>
       </div>
     </div>

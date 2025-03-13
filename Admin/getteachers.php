@@ -4,14 +4,15 @@ $obj=new dboperation();
 $s=1;
 $did = $_POST['did'];
 $sql = "SELECT 
-tc.teacherid,
-tc.teachername,
-tc.teacheremail,
-tc.teacherphone,
-tc.teacherusername,
-tc.teacherpassword,
-tc.teacherrole,
-tp.departmentname
+    tc.teacherid,
+    tc.teachername,
+    tc.teacheremail,
+    tc.teacherphone,
+    tc.teacherusername,
+    tc.teacherpassword,
+    tc.teacherrole,
+    CASE WHEN tc.isverified = 1 THEN 'Yes' ELSE 'No' END AS isverified,
+    tp.departmentname
 FROM tbldepartment tp 
 INNER JOIN tblteacher tc ON tp.departmentid = tc.departmentid 
 WHERE tp.departmentid = '$did'";
@@ -52,6 +53,9 @@ $res = $obj->executequery($sql);
                     <th class="border-bottom-0">
                     <h6 class="fw-semibold mb-0">Department</h6>
                     </th>
+                    <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0">Verification</h6>
+                    </th>
                 <th class="border-bottom-0">
                     <h6 class="fw-semibold mb-0">Edit</h6>
                     </th>
@@ -73,6 +77,7 @@ while ($display = mysqli_fetch_array($res))
                         <td><?php echo $display["teacherpassword"]?></td> -->
                         <td><?php echo $display["teacherrole"]?></td>
                         <td><?php echo $display["departmentname"]?></td>
+                        <td><?php echo $display["isverified"]?></td>
                         
 
 

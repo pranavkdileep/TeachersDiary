@@ -12,6 +12,46 @@ $obj = new dboperation();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logbook Registration</title>
     <!-- <link rel="stylesheet" href="styletable.css"> -->
+     <style>
+        .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    max-height: 70%;
+    overflow-y: auto;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover {
+    color: black;
+}
+#attendanceTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#attendanceTable th, #attendanceTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+     </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -38,6 +78,7 @@ $obj = new dboperation();
                                             <th class="border-bottom-0"><h6 class="fw-semibold mb-0">Subject</h6></th>
                                             <th class="border-bottom-0"><h6 class="fw-semibold mb-0">Module/Cell</h6></th>
                                             <th class="border-bottom-0"><h6 class="fw-semibold mb-0">Topics/Workdone</h6></th>
+                                            <th class="border-bottom-0"><h6 class="fw-semibold mb-0">Mark Attendance</h6></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -80,6 +121,9 @@ $obj = new dboperation();
                                                 <td>
                                                     <input type="text" class="form-control" name="topics[]" placeholder="Enter topics">
                                                 </td>
+                                                <td>
+                                                    <button type="button" id="btnattn" class="btn btn-dark float-end">Mark Attendance</button>
+                                                </td>
                                             </tr>
                                             <?php
                                         }
@@ -96,7 +140,16 @@ $obj = new dboperation();
                 </div>
             </div>
         </div>
+        
+</div>
     </div>
+    
+
+<!-- Date Picker (assumed to exist in your page) -->
+<input type="date" id="datePicker" value="2025-03-09">
+    <script>
+
+    </script>
 
     <?php
     include("footer.php");

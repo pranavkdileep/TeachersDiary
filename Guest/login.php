@@ -76,6 +76,9 @@
     <div class="reset-link">
         <a href="forgotpass.php">Forgot your password?</a>
     </div>
+    <div class="reset-link">
+        <a href="register.php">Register New Teacher</a>
+    </div>
 </div>
 
 </body>

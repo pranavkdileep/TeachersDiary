@@ -9,11 +9,12 @@ if(isset($_POST['save'])){
     $tphno=$_POST["txtphone"];
     $trole=$_POST["txtrole"];
     $tid=$_POST["id"];
-    $sql="UPDATE tblteacher SET teachername='$tname',teacheremail='$temail',teacherphone='$tphno',teacherrole='$trole' where teacherid='$tid'";
+    $isverified=$_POST["verification"]== 1?1:0;
+    $sql="UPDATE tblteacher SET teachername='$tname',teacheremail='$temail',teacherphone='$tphno',teacherrole='$trole',isverified='$isverified' where teacherid='$tid'";
     $res=$obj->executequery($sql);
         if($res==1)
         {
-            echo "<script>alert('Saved successfully.');
+            echo "<script>alert('Saved successfully.$isverified');
             window.location='teacherview.php'</script>";
         }
         else

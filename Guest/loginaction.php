@@ -19,7 +19,7 @@ if (mysqli_num_rows($result) == 1)
 else if (mysqli_num_rows($result) == 0)
 
 {
-    $sqlquery = "select * from tblteacher where teacherusername='$username' and teacherpassword='$password'";
+    $sqlquery = "select * from tblteacher where teacherusername='$username' and teacherpassword='$password' and isverified='1'";
     $result = $obj->executequery($sqlquery);
 
 
@@ -43,8 +43,14 @@ else if (mysqli_num_rows($result) == 0)
 else
 {
 
-    echo "<script>alert('Invalid Username/Password!!'); window.location='login.php'</script>";
-    
+    $sqlquery = "select * from tblteacher where teacherusername='$username' and teacherpassword='$password' and isverified='0'";
+    $result = $obj->executequery($sqlquery);
+    if (mysqli_num_rows($result) == 1){
+        echo "<script>alert('Your Account is not verified'); window.location='../Guest/login.php'</script>";
+    }
+    else{
+        echo "<script>alert('Invalid Username or Password'); window.location='../Guest/login.php'</script>";
+    }
 }
 } 
 ?>

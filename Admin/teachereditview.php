@@ -47,6 +47,8 @@ $id=$_GET['id'];
             <input type="text" name="txtphone" placeholder="enter phno"  class="form-control" value="<?php echo $dis["teacherphone"]?>"><br>
             <!-- Username:<input type="text" name="txtusername" placeholder="enter username" value="<?php echo $dis["teacherusername"]?>">
             password:<input type="text" name="txtpassword" placeholder="enter password" value="<?php echo $dis["teacherpassword"]?>"> -->
+            <label for="exampleInputEmail1" class="form-label"> Approve Status:</label><br>
+            <input type="checkbox" name="verification" value="1" <?php echo ($dis["isverified"]=="1")?"checked":"";?>>Verified <br><br>
             <label for="exampleInputEmail1" class="form-label"> Select Role:</label><br>
             <input type="radio" name="txtrole" value="HOD"<?php echo ($dis["teacherrole"]=="HOD")?"checked":"";?>>HOD <input type="radio" name="txtrole" value="Staff" <?php echo ($dis["teacherrole"]=="Staff")?"checked":"";?>>Staff <br><br>
             <input type="submit" value="Register" name="save" class="btn btn-primary">

@@ -14,15 +14,15 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com'; // SMTP server address
     $mail->SMTPAuth   = true;                // Enable SMTP authentication
-    $mail->Username   = 'joseshelbin69@gmail.com';  // SMTP username
+    $mail->Username   = 'amirthjoy@gmail.com';  // SMTP username
     $mail->Password   = 'xseoiqskghlxqwre';     // SMTP password
     $mail->SMTPSecure = 'ssl';               // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 465;                 // TCP port to connect to
     // Sender and recipient details
-    $mail->setFrom('joseshelbin69@gmail.com');
+    $mail->setFrom('amirthjoy@gmail.com');
     $mail->addAddress($mailtoaddress);
     // Email subject and body
-    $mail->Subject = 'Santhigiri College: Your password has been successfully reset ';
+    $mail->Subject = 'University College of CyberSecurity: Your password has been successfully reset ';
     $mail->Body    = $bodyContent;
     // Optional: Add attachments
     // $mail->addAttachment('/path/to/file.pdf');
