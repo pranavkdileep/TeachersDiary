@@ -72,7 +72,15 @@ if(!isset($_SESSION["teacherid"]))
                 <span>
                   <img src="assets\images\logos\user-pen-alt-svgrepo-com.svg" width="20px" height="20px" alt="">
                 </span>
-                <span class="hide-menu">Edit Attendence</span>
+                <span class="hide-menu">View / Edit Attendence</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="studentattendancefilter.php" aria-expanded="false">
+                <span>
+                  <img src="assets\images\logos\user-pen-alt-svgrepo-com.svg" width="20px" height="20px" alt="">
+                </span>
+                <span class="hide-menu">Download Attendence</span>
               </a>
             </li>
             
