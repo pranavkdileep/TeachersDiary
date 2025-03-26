@@ -1,5 +1,6 @@
 <?php
-include("header.php");
+//include("header.php");
+session_start();
 include_once("../dboperation.php");
 require '../vendor/autoload.php'; // Include PhpSpreadsheet via Composer
 
