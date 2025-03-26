@@ -1,7 +1,7 @@
 <?php
 
 include("header.php");
-include_once("../dboperation.php");
+include_once("../../dboperation.php");
 $obj = new dboperation();
 
 // Assuming teacher is logged in and their ID is stored in session
