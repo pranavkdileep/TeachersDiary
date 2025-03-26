@@ -105,6 +105,16 @@ if(!isset($_SESSION["aid"]))
             </li>
 
             <li class="sidebar-item">
+              <a class="sidebar-link" href="studentattendancefilter.php" aria-expanded="false">
+                <span>
+                  <img src="assets\images\logos\user-pen-alt-svgrepo-com.svg" width="20px" height="20px" alt="">
+                </span>
+                <span class="hide-menu">Download Attendence</span>
+              </a>
+            </li>
+            
+
+            <li class="sidebar-item">
               <a class="sidebar-link" href="report_teacher.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
