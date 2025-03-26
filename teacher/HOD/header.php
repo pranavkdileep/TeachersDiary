@@ -60,6 +60,22 @@ if(!isset($_SESSION["teacherid"]))
               </a>
             </li>
             <li class="sidebar-item">
+              <a class="sidebar-link" href="attendence.php" aria-expanded="false">
+                <span>
+                  <img src="..\assets\images\logos\user-pen-alt-svgrepo-com.svg" width="20px" height="20px" alt="">
+                </span>
+                <span class="hide-menu">Attendence</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="studentattendanceupdate.php" aria-expanded="false">
+                <span>
+                  <img src="..\assets\images\logos\user-pen-alt-svgrepo-com.svg" width="20px" height="20px" alt="">
+                </span>
+                <span class="hide-menu">Edit Attendence</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
               <a class="sidebar-link" href="subjectallocation.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
