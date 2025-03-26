@@ -2,48 +2,19 @@
 session_start();
 include("../../dboperation.php");
 $obj=new dboperation();
-$s=1;
-$cid = $_POST['cid'];
- $sql = "SELECT * FROM tblsubject WHERE semester='$cid'";
+$cid=$_POST['courseid'];
+$id = $_POST['semno'];
+$sql = "SELECT * FROM subject_teacher st inner join tblsubject ts ON st.subjectid=ts.subjectid WHERE st.semester='$id' and ts.courseid='$cid' and st.teacherid=".$_SESSION['teacherid'];
 $res = $obj->executequery($sql);
 ?>
-
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Slno</th>
-                        <th>Subject</th>
-                        <th>Teacher</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    while ($display = mysqli_fetch_array($res)) {
-                    ?>
-                        <tr>
-                            <td><?php echo $s++ ?></td>
-                            <td><?php echo $display["subjectname"] ?></td>
-                            <td>
-                                <select name="ddlteacher[]">
-                                <option value="0">---Select---</option>
-                                    <?php
-                                    // Fetch teachers for the current department dynamically
-                                    $sqlte = "select * from tblteacher where departmentid=" . $_SESSION['deptid'];
-                                    $reste = $obj->executequery($sqlte);
-                                    while ($displayte = mysqli_fetch_array($reste)) {
-                                    ?>
-                                        <option value="<?php echo $displayte["teacherid"]; ?>"><?php echo $displayte["teachername"]; ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                                <input type="hidden" name="subjectid[]" value="<?php echo $display['subjectid']; ?>">
-                            </td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-            </table>
-        </form>
-    </div>
+<select id="ddlsubject" name="ddlsubject" required>
+<option value="" selected>---select---</option>
+<?php
+while ($display = mysqli_fetch_array($res)) {
+?>  
+    <option value="<?php echo $display['subjectid']; ?>">
+    <?php echo $display['subjectname']; ?></option>  
+<?php
+}
+?>
+ </select>
