@@ -71,7 +71,7 @@ while ($display = mysqli_fetch_array($res))
 
 
                       <div class="d-flex align-items-center gap-2">
-                        <a href="teachereditview.php?id=<?php echo $display['universityid']?>" class="btn btn-success mb-3">
+                        <a href="studenteditview.php?uid=<?php echo $display['universityid']?>" class="btn btn-success mb-3">
                           <i class="ti ti-edit"></i>
                         </a>
 
@@ -89,7 +89,7 @@ while ($display = mysqli_fetch_array($res))
 
 
                       <div class="d-flex align-items-center gap-2">
-                        <a href="teacherdelete.php?id=<?php echo $display['universityid']?>" class="btn btn-danger mb-3">
+                        <a href="studentdelete.php?uid=<?php echo $display['universityid']?>" class="btn btn-danger mb-3">
                           <i class="ti ti-trash"></i>
                         </a>
                       </div>
