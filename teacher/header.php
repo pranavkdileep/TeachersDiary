@@ -67,6 +67,14 @@ if(!isset($_SESSION["teacherid"]))
                 <span class="hide-menu">Attendence</span>
               </a>
             </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="studentattendanceupdate.php" aria-expanded="false">
+                <span>
+                  <img src="assets\images\logos\user-pen-alt-svgrepo-com.svg" width="20px" height="20px" alt="">
+                </span>
+                <span class="hide-menu">Edit Attendence</span>
+              </a>
+            </li>
             
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
