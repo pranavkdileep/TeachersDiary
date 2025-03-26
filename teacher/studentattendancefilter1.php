@@ -8,7 +8,13 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 $obj = new dboperation();
 
+// Assuming teacher is logged in and their ID is stored in session
+$teacherid = isset($_SESSION['teacherid']) ? $_SESSION['teacherid'] : 0;
 
+if($teacherid == 0) {
+    echo "<script>alert('Please login as a teacher.'); window.location='login.php';</script>";
+    exit();
+}
 
 // Initialize filter variables
 $subjectid = isset($_POST['ddlsubject']) ? $_POST['ddlsubject'] : '';
@@ -17,7 +23,7 @@ $to_date = isset($_POST['txttodate']) ? $_POST['txttodate'] : '';
 $download_excel = isset($_POST['download_excel']) ? true : false;
 
 // Get department ID for the teacher
-$teacher_dept_sql = "SELECT departmentid FROM tblteacher";
+$teacher_dept_sql = "SELECT departmentid FROM tblteacher WHERE teacherid = $teacherid";
 $dept_res = $obj->executequery($teacher_dept_sql);
 $dept_row = mysqli_fetch_array($dept_res);
 $departmentid = $dept_row['departmentid'];
