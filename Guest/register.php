@@ -91,7 +91,7 @@ $obj = new dboperation();
 <script src="../jquery-3.6.0.min.js"></script>
 <script>
   function emailvalidation() {
-    alert("hii");
+    
     var email = document.getElementById('email').value;
     var emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
 
