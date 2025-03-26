@@ -122,7 +122,7 @@ $obj = new dboperation();
                                                     <input type="text" class="form-control" name="topics[]" placeholder="Enter topics">
                                                 </td>
                                                 <td>
-                                                    <button type="button" id="btnattn" class="btn btn-dark float-end">Mark Attendance</button>
+                                                    <a href="/teacher/attendence.php" class="btn btn-dark float-end">Mark Attendance</a>
                                                 </td>
                                             </tr>
                                             <?php

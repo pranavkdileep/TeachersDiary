@@ -185,6 +185,16 @@ CREATE TABLE tblstudent (
     PRIMARY KEY (universityid),
 )  ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+CREATE TABLE tblattendance (
+    attendanceid INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    universityid VARCHAR(50) NOT NULL,
+    hour INT(1) NOT NULL CHECK (hour BETWEEN 1 AND 6),
+    ispresent BOOLEAN NOT NULL DEFAULT 0, -- 0 for absent, 1 for present
+    marked_at DATE,
+    subjectid INT(11) NOT NULL,
+    teacherid INT(11) NOT NULL
+);
+
 --
 -- Indexes for dumped tables
 --
